@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Game Bot",
+  "version": "1.0",
+  "description": "Solvers for LinkedIn games: Zip, Tango, Queens",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/games/tango*"],
+      "js": ["utils.js", "tango.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.linkedin.com/games/zip*"],
+      "js": ["utils.js", "zip.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.linkedin.com/games/queens*"],
+      "js": ["utils.js", "queens.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
